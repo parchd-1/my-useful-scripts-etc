@@ -1,0 +1,7 @@
+[Unit]
+Description=Email available updates to root
+
+[Service]
+Type=oneshot
+
+ExecStart=/usr/bin/email_updates.sh

@@ -1,0 +1,9 @@
+[Unit]
+Description=Check for updates every day (and email them to root)
+
+[Timer]
+OnCalendar=daily
+Persistent=False
+ 
+[Install]
+WantedBy=timers.target

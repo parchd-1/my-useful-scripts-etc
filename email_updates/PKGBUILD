@@ -1,0 +1,21 @@
+# Maintainer: parchd <parchd at archlinux.info>
+
+pkgname=email-updates
+pkgver=0.1.1
+pkgrel=1
+pkgdesc='Script and timer to email updates to root each day'
+license=('none')
+source=('email-updates.service' 'email-updates.timer' 'email-updates.sh')
+sha512sums=(
+    '8f01c9d03e5ced702dea45cabbd18f1c607c9d20c8fa44a8536f85fcdf50b5b8f0ae73f20c5864f9dca2738da266b9bb5d8048cb8e732c1cbb88e8f01fef667f'
+    'aa06020c64e7ed1bd9458ddd695ff1655951774a09fad4ee9b38a44d1f908101dc5fbdc4cc8b671e99e0f03441d14c08a132e3aa29be99ec980a4815c1e0abee'
+    'da51cde0872b0194ce27ea4758a05b614f2358e284fddc9aa325cf16b2486d8066a1e93bef1d12d28a72a6df65f5cb757f912e78665574b651f682c2df3b688f'
+)
+arch=('any')
+depends=('pacman' 'systemd')
+
+package() {
+        install -Dm644 "email-updates.service" "$pkgdir/usr/lib/systemd/system/email-updates.service"
+        install -Dm644 "email-updates.timer" "$pkgdir/usr/lib/systemd/system/email-updates.timer"
+        install -Dm744 "email-updates.sh" "$pkgdir/usr/bin/email-updates.sh"
+    }
