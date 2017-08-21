@@ -7,8 +7,8 @@ host=$(hostname)
 if [[ $numupdates -gt 0 ]]; then
     sendmail -t <<.
 To: root
-From: root (@$host)
-Subject: checkupdates: $numupdates available updates
+From: root
+Subject: checkupdates: $numupdates available updates on $host
 
 $updates
 
