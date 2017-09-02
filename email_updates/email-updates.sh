@@ -4,7 +4,7 @@ updates=$(checkupdates)
 numupdates=$(echo "$updates"|wc -l)
 host=$(hostname)
 
-if [[ $numupdates -gt 0 ]]; then
+if [[ $updates ]]; then
     sendmail -t <<.
 To: root
 From: root
