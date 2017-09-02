@@ -1,7 +1,7 @@
 # Maintainer: parchd <parchd at archlinux.info>
 
 pkgname=email-updates
-pkgver=0.1.1
+pkgver=0.1.2
 pkgrel=1
 pkgdesc='Script and timer to email updates to root each day'
 license=('none')
